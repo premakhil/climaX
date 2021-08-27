@@ -7,7 +7,7 @@ function App(props) {
 
     const axios = require('axios');
 
-    console.log(props);
+
 
     const [name, setName] = useState('');
     const [temp, setTemp] = useState('');
@@ -51,7 +51,7 @@ function App(props) {
         // return () => {
         //     cleanup
         // }
-    }, [])
+    }, [props.search])
 
 
     return (
