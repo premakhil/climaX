@@ -18,6 +18,8 @@ function App(props) {
     const [wind, setWind] = useState('');
     const [pressure, setPressure] = useState('');
     const [country, setCountry] = useState('');
+
+
     const [invalid, setInvalid] = useState(false);
 
 
@@ -50,10 +52,6 @@ function App(props) {
             .catch((error) => {
                 console.error(error);
                 setInvalid(true);
-
-
-
-
 
 
             })

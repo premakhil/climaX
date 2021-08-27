@@ -1,6 +1,7 @@
 import React from 'react'
 import App from './App';
 import { useState } from 'react';
+import './SearchBar.css';
 
 function SearchBar() {
 
@@ -28,10 +29,14 @@ function SearchBar() {
             <div className="search-bar">
 
                 <form action="GET">
-                    <input type="text" placeholder="Enter location" value={tempSearch} onChange={(e) => {
-                        setTempSearch(e.target.value)
-                    }} />
-                    <input type="submit" value="submit" onClick={handleSearch} />
+                    <div className='search-bar-fields'>
+                        <div className="search-field">
+                            <input type="text" placeholder="Search" value={tempSearch} onChange={(e) => {
+                                setTempSearch(e.target.value)
+                            }} />
+                        </div>
+                        <input type="submit" value="submit" onClick={handleSearch} />
+                    </div>
                 </form>
 
             </div>

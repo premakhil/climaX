@@ -1,0 +1,17 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.search-bar-fields {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-field {
+    border-radius: 30px;
+    size: 100px;
+}
