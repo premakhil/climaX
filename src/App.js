@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-function App(search) {
+function App(props) {
 
     const axios = require('axios');
+
+    console.log(props);
 
     const [name, setName] = useState('');
     const [temp, setTemp] = useState('');
@@ -19,26 +21,38 @@ function App(search) {
 
 
     // const url = 'https://api.openweathermap.org/data/2.5/weather?q=Kannur&units=metric&APPID=202ea05f1ea260ad09ef2d90fe39df3a';
-    const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + search + '&units=metric&APPID=202ea05f1ea260ad09ef2d90fe39df3a';
+    const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + props.search + '&units=metric&APPID=202ea05f1ea260ad09ef2d90fe39df3a';
 
-    axios.get(url).then((response) => {
-
-
-        setName(response.data.name);
-        setTemp(response.data.main.temp);
-        setMaxTemp(response.data.main.temp_max);
-        setMinTemp(response.data.main.temp_min);
-        setWind(response.data.wind.speed);
-        setPressure(response.data.main.pressure);
-        setHumidity(response.data.main.humidity);
-        setCountry(response.data.sys.country);
+    const getData = () => {
+        axios.get(url).then((response) => {
 
 
+            setName(response.data.name);
+            setTemp(response.data.main.temp);
+            setMaxTemp(response.data.main.temp_max);
+            setMinTemp(response.data.main.temp_min);
+            setWind(response.data.wind.speed);
+            setPressure(response.data.main.pressure);
+            setHumidity(response.data.main.humidity);
+            setCountry(response.data.sys.country);
 
 
 
-    })
-        .catch(error => console.error(error));
+
+
+        })
+            .catch(error => console.error(error));
+
+    }
+
+
+    useEffect(() => {
+        getData();
+        // return () => {
+        //     cleanup
+        // }
+    }, [])
+
 
     return (
         <div className="main-class">
