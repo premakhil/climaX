@@ -1,6 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  
+}
+
 .main-class {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+.fas {
+  color: #053742;
+}
+
+/* for mobile */
+
+.location {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-top: 2rem;
+  
+  margin-left: -7rem;
+}
+
+
+.title {
+  margin-top: 0.25rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.Date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  margin-left: -5rem;
+  
+  
+}
+
+.blue-div {
+  height: 11rem;
+  width: 19rem;
+  background-color: #A2DBFA;
+  border-color: #A2DBFA;
+  margin-top: 1rem;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 0.2);
+
+}
+
+
+
+
+/* for galaxy fold */
+
+@media(max-width: 320px){
+
+  .location {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-top: 2rem;
+  margin-left: -5rem;
+}
+
+.blue-div {
+  height: 10rem;
+  width: 15rem;
+  background-color: #A2DBFA;
+  border-color: #A2DBFA;
+  margin-top: 1rem;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 0.2);
+
+}
+
+
+
+}
+
+/* for iphone 5 */
+
+@media screen and (device-aspect-ratio: 40/71) {
+
+  .location{
+    margin-left: -5rem;
+  }
+
+  .blue-div {
+  height: 10rem;
+  width: 17rem;
+  background-color: #A2DBFA;
+  border-color: #A2DBFA;
+  margin-top: 1rem;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 0.2);
+
+}
+
+
+}
+

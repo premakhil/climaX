@@ -29,13 +29,18 @@ function SearchBar() {
             <div className="search-bar">
 
                 <form action="GET">
-                    <div className='search-bar-fields'>
-                        <div className="search-field">
+                    <div className='input'>
+                        {/* <div className="input-field">
                             <input type="text" placeholder="Search" value={tempSearch} onChange={(e) => {
                                 setTempSearch(e.target.value)
                             }} />
-                        </div>
-                        <input type="submit" value="submit" onClick={handleSearch} />
+                        </div> */}
+
+                        <input className="input-field" type="text" placeholder="Search" value={tempSearch} onChange={(e) => {
+                            setTempSearch(e.target.value)
+                        }} />
+                        {/* <input type="submit" value="submit" onClick={handleSearch} /> */}
+                        <i style={{ color: '#053742' }} type="submit" value="submit" onClick={handleSearch} className="fas fa-search"></i>
                     </div>
                 </form>
 

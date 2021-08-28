@@ -8,6 +8,28 @@ function App(props) {
 
     const axios = require('axios');
 
+    const D = new Date();
+    const n = D.getDay();
+    const m = D.getMonth();
+    const y = D.getFullYear();
+    const d = D.getDate();
+
+
+
+
+
+
+
+
+    const days = { 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday", 7: "Sunday" };
+
+    const months = {
+        1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
+        7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"
+    };
+
+
+
 
 
     const [name, setName] = useState('');
@@ -18,6 +40,8 @@ function App(props) {
     const [wind, setWind] = useState('');
     const [pressure, setPressure] = useState('');
     const [country, setCountry] = useState('');
+
+    const [date, setDate] = useState('');
 
 
     const [invalid, setInvalid] = useState(false);
@@ -42,7 +66,7 @@ function App(props) {
 
             setInvalid(false);
 
-
+            setDate()
 
 
 
@@ -73,15 +97,42 @@ function App(props) {
 
 
 
-                <h1>{name}</h1> <br />
 
-                <h2>{temp}</h2>
+                <div className="location">
+
+                    <i className="fas fa-map-pin"></i>
+
+                    <div className="title">
+                        {name},    {country}
+                    </div>
+
+                    <br />
+
+                </div>
+
+                <div className="Date">
+
+                    {days[n]}, {months[m]} {y}
+
+
+                </div>
+
+
+                <div className="blue-div">
+
+
+
+
+
+                </div>
+
+                {/* <h2>{temp}</h2>
                 <h2>{maxtemp}</h2>
                 <h2>{mintemp}</h2>
                 <h2>{humidity}</h2>
                 <h2>{pressure}</h2>
                 <h2>{wind}</h2>
-                <h2>{country}</h2>
+                <h2>{country}</h2> */}
 
 
 
