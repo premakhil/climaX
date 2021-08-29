@@ -30,16 +30,12 @@ function SearchBar() {
 
                 <form action="GET">
                     <div className='input'>
-                        {/* <div className="input-field">
-                            <input type="text" placeholder="Search" value={tempSearch} onChange={(e) => {
-                                setTempSearch(e.target.value)
-                            }} />
-                        </div> */}
+
 
                         <input className="input-field" type="text" placeholder="Search" value={tempSearch} onChange={(e) => {
                             setTempSearch(e.target.value)
                         }} />
-                        {/* <input type="submit" value="submit" onClick={handleSearch} /> */}
+
                         <i style={{ color: '#053742' }} type="submit" value="submit" onClick={handleSearch} className="fas fa-search"></i>
                     </div>
                 </form>
@@ -47,6 +43,8 @@ function SearchBar() {
             </div>
 
             {searchTrue && <App search={search} />}
+
+
 
 
 
