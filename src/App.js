@@ -149,7 +149,7 @@ function App(props) {
 
                             <div className="condition">
 
-                                {condition}
+                                {description}
 
 
 
