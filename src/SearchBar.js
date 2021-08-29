@@ -32,7 +32,7 @@ function SearchBar() {
                     <div className='input'>
 
 
-                        <input className="input-field" type="text" placeholder="Search" value={tempSearch} onChange={(e) => {
+                        <input className="input-field" type="text" placeholder="Enter Location" value={tempSearch} onChange={(e) => {
                             setTempSearch(e.target.value)
                         }} />
 
