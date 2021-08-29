@@ -4,7 +4,6 @@ import axios from 'axios';
 import './App.css';
 
 
-
 function App(props) {
 
     const axios = require('axios');
@@ -16,25 +15,12 @@ function App(props) {
     const d = D.getDate();
 
 
-
-
-
-
-
-
-
-
-
-
     const days = { 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday", 0: "Sunday" };
 
     const months = {
         1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
         7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"
     };
-
-
-
 
 
     const [name, setName] = useState('');
@@ -54,11 +40,6 @@ function App(props) {
 
 
     const [invalid, setInvalid] = useState(false);
-
-
-
-
-
 
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + props.search + '&units=metric&APPID=202ea05f1ea260ad09ef2d90fe39df3a';
 
@@ -84,20 +65,11 @@ function App(props) {
 
             setCondition(response.data.weather[0].main);
 
-
-
-
-
-
-
         })
-
 
             .catch((error) => {
                 console.error(error);
                 setInvalid(true);
-
-
 
             })
     }
@@ -122,16 +94,7 @@ function App(props) {
 
             </div> :
 
-
-
-
                 <div className="main-class">
-
-
-
-
-
-
 
                     <div className="location">
 
@@ -181,11 +144,9 @@ function App(props) {
                             {condition}
 
 
+
+
                         </div>
-
-
-
-
 
                     </div>
 
@@ -218,18 +179,7 @@ function App(props) {
                         </div>
 
 
-
-
-
-
                     </div>
-
-
-
-
-
-
-
 
                 </div>}
         </div>
