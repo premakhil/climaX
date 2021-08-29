@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 
 
+
 function App(props) {
 
     const axios = require('axios');
@@ -21,7 +22,11 @@ function App(props) {
 
 
 
-    const days = { 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday", 7: "Sunday" };
+
+
+
+
+    const days = { 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday", 0: "Sunday" };
 
     const months = {
         1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
@@ -41,10 +46,16 @@ function App(props) {
     const [pressure, setPressure] = useState('');
     const [country, setCountry] = useState('');
 
-    const [date, setDate] = useState('');
+    const [icon, setIcon] = useState('');
+
+    const [description, setDescription] = useState('');
+
+    const [condition, setCondition] = useState('');
 
 
     const [invalid, setInvalid] = useState(false);
+
+
 
 
 
@@ -55,8 +66,10 @@ function App(props) {
         axios.get(url).then((response) => {
 
 
+
             setName(response.data.name);
             setTemp(response.data.main.temp);
+
             setMaxTemp(response.data.main.temp_max);
             setMinTemp(response.data.main.temp_min);
             setWind(response.data.wind.speed);
@@ -66,7 +79,14 @@ function App(props) {
 
             setInvalid(false);
 
-            setDate()
+            setIcon(response.data.weather[0].icon);
+            setDescription(response.data.weather[0].description);
+
+            setCondition(response.data.weather[0].main);
+
+
+
+
 
 
 
@@ -78,12 +98,14 @@ function App(props) {
                 setInvalid(true);
 
 
+
             })
     }
 
 
     useEffect(() => {
         getData();
+
         // return () => {
         //     cleanup
         // }
@@ -93,6 +115,8 @@ function App(props) {
     return (
         <div>
             {invalid ? <h1>Invalid entry</h1> : <div className="main-class">
+
+
 
 
 
@@ -112,7 +136,7 @@ function App(props) {
 
                 <div className="Date">
 
-                    {days[n]}, {months[m]} {y}
+                    {days[n]},  {months[m]} {y}
 
 
                 </div>
@@ -123,16 +147,72 @@ function App(props) {
 
 
 
+                    <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="" className="icon" />
+
+
+
+
+                    <div className="temp">
+
+                        {Math.round(temp)}°
+
+                    </div>
+
+                    <div className="max-and-min-temp">
+
+                        <i className="fas fa-arrow-up"> <span className="max-temp">{Math.ceil(maxtemp)}°</span></i>
+                        <i className="fas fa-arrow-down"> <span className="min-temp">{Math.floor(mintemp)}°</span></i>
+
+                    </div>
+
+                    <div className="condition">
+
+                        {condition}
+
+
+                    </div>
+
+
 
                 </div>
 
-                {/* <h2>{temp}</h2>
-                <h2>{maxtemp}</h2>
-                <h2>{mintemp}</h2>
-                <h2>{humidity}</h2>
-                <h2>{pressure}</h2>
-                <h2>{wind}</h2>
-                <h2>{country}</h2> */}
+                <div className="extra-details">
+
+                    <div className="humidity">
+
+                        <i class="fas fa-tint"></i>
+                        <span>Humidity</span>-<span>{humidity}%</span>
+
+                    </div>
+
+
+                    <div className="wind">
+
+                        <i class="fas fa-wind"></i>
+
+                        <span>Wind</span>-<span>{wind} m/s</span>
+
+
+                    </div>
+
+
+                    <div className="pressure">
+
+                        <i class="fas fa-temperature-high"></i>
+
+                        <span>Pressure</span>-<span>{pressure} hPa</span>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
 
 
 
