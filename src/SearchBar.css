@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -39,6 +41,16 @@
 .fas {
     margin-top: 0.5rem;
     align-content: flex-end;
+}
+
+.title-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
+    color: #053742;
+    font-size: 60px;
+    margin-top: 8rem;
 }
 
 

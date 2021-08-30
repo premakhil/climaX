@@ -10,12 +10,18 @@ function SearchBar() {
 
     const [searchTrue, setsearchTrue] = useState(false);
 
+    const [title, setTitle] = useState(true);
+
+
+
     const handleSearch = (e) => {
 
         e.preventDefault();
 
         setsearchTrue(true);
         setSearch(tempSearch);
+
+        setTitle(false);
 
     }
 
@@ -37,8 +43,20 @@ function SearchBar() {
                         }} />
 
                         <i style={{ color: '#053742' }} type="submit" value="submit" onClick={handleSearch} className="fas fa-search"></i>
+
+
                     </div>
+
+                    {title ? <div className="title-new">
+
+                        climaX
+
+                    </div> : ''}
+
+
                 </form>
+
+
 
 
 
