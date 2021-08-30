@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/climaX/static/css/main.93c9779b.chunk.css",
+    "main.js": "/climaX/static/js/main.6373bdcf.chunk.js",
+    "main.js.map": "/climaX/static/js/main.6373bdcf.chunk.js.map",
+    "runtime-main.js": "/climaX/static/js/runtime-main.5a39accc.js",
+    "runtime-main.js.map": "/climaX/static/js/runtime-main.5a39accc.js.map",
+    "static/js/2.735e0a85.chunk.js": "/climaX/static/js/2.735e0a85.chunk.js",
+    "static/js/2.735e0a85.chunk.js.map": "/climaX/static/js/2.735e0a85.chunk.js.map",
+    "index.html": "/climaX/index.html",
+    "static/css/main.93c9779b.chunk.css.map": "/climaX/static/css/main.93c9779b.chunk.css.map",
+    "static/js/2.735e0a85.chunk.js.LICENSE.txt": "/climaX/static/js/2.735e0a85.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a39accc.js",
+    "static/js/2.735e0a85.chunk.js",
+    "static/css/main.93c9779b.chunk.css",
+    "static/js/main.6373bdcf.chunk.js"
+  ]
+}
