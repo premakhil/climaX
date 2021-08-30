@@ -49,7 +49,7 @@ function SearchBar() {
 
                     {title ? <div className="title-new">
 
-                        climaX
+                        climaX!
 
                     </div> : ''}
 
