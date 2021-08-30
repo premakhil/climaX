@@ -40,6 +40,9 @@ function SearchBar() {
                     </div>
                 </form>
 
+
+
+
             </div>
 
             {searchTrue && <App search={search} />}

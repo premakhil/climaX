@@ -26,7 +26,7 @@
     background-color: #fff;
     outline: none;
     color: #000;
-    border: 1.25px solid #000;
+    border: 3.25px solid #A2DBFA;
     width: 15rem;
     border-radius: 30px;
     height: 2em;
@@ -41,6 +41,8 @@
     align-content: flex-end;
 }
 
+
+
 /* for galaxy fold */
 
 @media(max-width: 320px){
@@ -50,7 +52,7 @@
     background-color: #fff;
     outline: none;
     color: #000;
-    border: 1.25px solid #000;
+    border: 3.25px solid #A2DBFA;
     width: 12rem;
     border-radius: 30px;
     height: 2em;
